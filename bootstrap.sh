@@ -1,5 +1,7 @@
 cd /workspace/
 bench init --skip-redis-config-generation --frappe-branch version-13 frappe-bench
+rm /workspace/frappe-bench/sites/common_site_config.json
+touch /workspace/frappe-bench/sites/common_site_config.json
 echo '{
  "background_workers": 1,
  "file_watcher_port": 6787,
