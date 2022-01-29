@@ -7,7 +7,7 @@
   },
   "dockerComposeFile": "./docker-compose.yml",
   "service": "frappe",
-  "workspaceFolder": "/workspace/development",
+  "workspaceFolder": "/workspace",
   "shutdownAction": "stopCompose",
   "extensions": [
     "ms-python.python",
