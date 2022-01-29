@@ -16,3 +16,22 @@ To make bench work in our local dev configuration, you need to initalise a frapp
 ```
 
 All of this is included in the bootstrap script which just needs to be run in order to set stuff up inside devcontainer.
+
+
+## Further Steps
+
+You can proceed to create a new app and then a new site, then install the app on bench using the following commands. The following commands will make an app called **new-app** and a site called **mysite.localhost**
+
+```shell
+bench new-app sample-app
+bench new-site mysite.localhost --mariadb-root-password 123 --admin-password admin --no-mariadb-socket
+bench --site mysite.localhost install-app sample-app
+```
+
+You can also enable developer mode for the newly created site so that new doctypes can be made and worked upon. 
+
+```shell
+bench set-config developer_mode 1
+bench clear-cache
+bench setup requirements --dev
+```
